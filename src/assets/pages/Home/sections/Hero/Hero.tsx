@@ -14,7 +14,10 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "100px"
+    }
   }))
 
   const StyledImg = styled("img")(({ theme }) => ({
@@ -22,7 +25,7 @@ const Hero = () => {
     width: "100%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       maxWidth: "200px"
     }
   }))
@@ -66,14 +69,14 @@ const Hero = () => {
 
             <Grid container justifyContent="center" spacing={2} mt={4}>
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton color="secondary">
+                <StyledButton onClick={}>
                   <DownloadIcon />
                   <Typography>Download CV</Typography>
                 </StyledButton>
               </Grid>
 
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton>
+                <StyledButton onClick={}>
                   <EmailIcon />
                   <Typography>Contact me</Typography>
                 </StyledButton>
