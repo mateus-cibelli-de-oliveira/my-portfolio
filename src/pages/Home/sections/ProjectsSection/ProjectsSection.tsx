@@ -27,7 +27,7 @@ const ProjectsSection: React.FC = () => {
       description:
         'Trata-se de um aplicativo responsivo feito em react para facilitar a vida de quem não quer "depender da própria sorte", mas de um sistema que possibilite gerar números aleatórios para poder trazer mais confiança ao jogo.',
       technologies: "Technologies: JavaScript, React.js e CSS",
-      websiteURL: "https://trello.com/",
+      websiteURL: "https://gerador-ms.vercel.app/",
       codeURL: "https://github.com/mateus-cibelli-de-oliveira/geradorMS",
     },
   ];
