@@ -1,4 +1,6 @@
-import { Grid, Typography, styled } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import styled from "../../utils/styled";
+import CustomGrid from "../CustomGrid/CustomGrid";
 import StyledButton from "../StyledButton/StyledButton";
 
 export interface ProjectCardProps {
@@ -9,7 +11,7 @@ export interface ProjectCardProps {
   technologies: string;
   websiteURL: string;
   codeURL?: string;
-};
+}
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
@@ -43,29 +45,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <StyledCard>
-      <Typography variant="h5" fontSize="1.6rem">
+      <Typography variant="h5" sx={{ fontSize: "1.75rem !important" }}>
         {title}
       </Typography>
       <Typography fontSize="1.4rem">{subtitle}</Typography>
       <StyledImg src={srcImg} />
-      <Typography fontSize="1.2rem">{description}</Typography>
+      <Typography fontSize="1.2rem" sx={{ textAlign: "justify" }}>{description}</Typography>
       <Typography fontWeight={600} pt={2}>
         {technologies}
       </Typography>
-      <Grid container spacing={1} pt={2}>
-        <Grid item xs={6}>
+      <CustomGrid variant="container" spacing={1} pt={2}>
+        <Box>
           <StyledButton onClick={() => window.open(websiteURL)}>
             View Project
           </StyledButton>
-        </Grid>
+        </Box>
         {codeURL && (
-          <Grid item xs={6}>
+          <Box>
             <StyledButton onClick={() => window.open(codeURL)}>
               View Code
             </StyledButton>
-          </Grid>
+          </Box>
         )}
-      </Grid>
+      </CustomGrid>
     </StyledCard>
   );
 };

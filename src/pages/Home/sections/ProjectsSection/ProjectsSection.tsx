@@ -1,4 +1,6 @@
-import { Box, Container, Grid, Typography, styled } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import styled from "../../../../utils/styled";
+import CustomGrid from "../../../../components/CustomGrid/CustomGrid";
 import ProjectCard, {
   type ProjectCardProps,
 } from "../../../../components/ProjectCard/ProjectCard";
@@ -12,7 +14,7 @@ const ProjectsSection: React.FC = () => {
   const projects = [
     {
       title: 'Site institucional "Info-Office" desenvolvido em WordPress',
-      subtitle: "Mar 2021",
+      subtitle: "(Mar 2021)",
       srcImg: "/src/assets/images/capa-info-office.jpg",
       description:
         "É um modelo de site de empreendimentos usando WordPress em um tema padrão onde trabalhei na customização do layout, organização da estrutura de páginas e navegação. O foco maior foi criar uma experiência clara, responsiva e funcional, simulando um site de portfólio pessoal.",
@@ -22,7 +24,7 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: "Gerador de números aleatórios da Mega-Sena feito em React",
-      subtitle: "Dez 2024",
+      subtitle: "(Dez 2024)",
       srcImg: "/src/assets/images/capa-gerador-ms.jpg",
       description:
         'Trata-se de um aplicativo responsivo feito em react para facilitar a vida de quem não quer "depender da própria sorte", mas de um sistema que possibilite gerar números aleatórios para poder trazer mais confiança ao jogo.',
@@ -34,7 +36,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <StyledExperience>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Box id="projects" pt={5} pb={3}>
           <Typography
             variant="h2"
@@ -44,11 +46,18 @@ const ProjectsSection: React.FC = () => {
             Projects
           </Typography>
         </Box>
-        <Grid container spacing={5} pb={3}>
+
+        <CustomGrid variant="container" spacing={5} pb={3}>
           {projects.map((project: ProjectCardProps, index: number) => (
-            <Grid item md={6} key={index}>
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <AnimationComponent
-                moveDirection={index % 2 == 0 ? "right" : "left"}
+                moveDirection={index % 2 === 0 ? "right" : "left"}
               >
                 <ProjectCard
                   title={project.title}
@@ -60,9 +69,9 @@ const ProjectsSection: React.FC = () => {
                   codeURL={project.codeURL}
                 />
               </AnimationComponent>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </CustomGrid>
       </Container>
     </StyledExperience>
   );

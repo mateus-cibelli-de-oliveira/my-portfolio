@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { styled } from "@mui/material/styles";
+import styled from "../../utils/styled";
 
 const Canvas = styled("canvas")(() => ({
-  width: "240px",
-  height: "130px",
+  width: "150px",
+  height: "120px",
   position: "absolute",
   left: 0,
   zIndex: -1,

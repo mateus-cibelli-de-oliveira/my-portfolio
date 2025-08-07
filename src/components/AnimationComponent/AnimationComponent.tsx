@@ -1,5 +1,5 @@
 import { keyframes } from "@emotion/react";
-import { styled } from "@mui/system";
+import styled from "../../utils/styled";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface AnimationComponentProps {

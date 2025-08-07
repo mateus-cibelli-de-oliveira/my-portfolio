@@ -1,12 +1,12 @@
 import {
   Container,
-  Grid,
   Box,
-  styled,
   Typography,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import styled from "../../../../utils/styled";
+import CustomGrid from "../../../../components/CustomGrid/CustomGrid";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
@@ -17,8 +17,8 @@ import CV from "../../../../assets/pdfs/Open.pdf";
 
 const HeroSection: React.FC = () => {
   const StyledImg = styled("img")(({ theme }) => ({
-    maxWidth: "400px",
-    width: "100%",
+    maxWidth: "420px",
+    width: "88%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
     [theme.breakpoints.down("xs")]: {
@@ -41,7 +41,6 @@ const HeroSection: React.FC = () => {
   }));
 
   const handleDownload = () => {
-    console.log("download");
     const link = document.createElement("a");
     link.href = CV;
     link.download = "example.pdf";
@@ -51,80 +50,99 @@ const HeroSection: React.FC = () => {
   };
 
   const handleEmail = () => {
-  const email = "mateuscibelli@hotmail.com";
-  const subject = encodeURIComponent("Subject");
-  const body = encodeURIComponent("Hello! I saw your portfolio...");
-  const outlookLink = `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${subject}&body=${body}`;
-  window.open(outlookLink, "_blank");
+    const email = "mateuscibelli@hotmail.com";
+    const subject = encodeURIComponent("Subject");
+    const body = encodeURIComponent("Hello! I saw your portfolio...");
+    const outlookLink = `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${subject}&body=${body}`;
+    window.open(outlookLink, "_blank");
   };
 
   return (
     <StyledHero>
       <Container maxWidth="lg">
-        <Grid
-          container
-          spacing={10}
-          display="flex"
+        <CustomGrid
+          variant="container"
+          spacing={4}
+          alignItems="center"
           justifyContent="center"
-          sx={{ "--Grid-rowSpacing": { xs: "50px", sm: "80px" } }}
         >
-          <Grid item xs={12} md={5}>
-            <Box
-              position="relative"
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Box position="relative" zIndex={1} flexDirection="column">
-                <StyledImg src={Avatar} />
-              </Box>
-              {!isMobile && (
-                <Box
-                  position="absolute"
-                  mt={24}
-                  display="flex"
-                  right="-10px"
-                  zIndex={0}
-                >
-                  <AnimatedBackground />
-                </Box>
-              )}
+          {/* COLUNA ESQUERDA: IMAGEM */}
+          <Box
+            sx={{
+              width: { xs: "100%", md: "34%" },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <Box zIndex={1}>
+              <StyledImg src={Avatar} />
             </Box>
-          </Grid>
 
-          <Grid item xs={12} md={7}>
+            {!isMobile && (
+              <Box position="absolute" mt={36} right={0} zIndex={0}>
+                <AnimatedBackground />
+              </Box>
+            )}
+          </Box>
+
+          {/* COLUNA DIREITA: TEXTO + BOTÕES */}
+          <Box
+            sx={{
+              width: { xs: "100%", md: "45%" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
             <Typography
               color="primary.contrastText"
               variant="h1"
               textAlign="center"
+              sx={{ whiteSpace: "nowrap" }}
             >
               Mateus Cibelli
             </Typography>
-
             <Typewriter
               text="I'm a Web Developer"
               delay={120}
               variant="h2"
               color="primary.contrastText"
             />
-
-            <Grid container justifyContent="center" spacing={2} mt={4}>
-              <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton onClick={() => handleDownload()}>
+            <CustomGrid
+              variant="container"
+              justifyContent="center"
+              spacing={2}
+              mt={4}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <StyledButton onClick={handleDownload}>
                   <DownloadIcon />
                   <Typography>Download CV</Typography>
                 </StyledButton>
-              </Grid>
+              </Box>
 
-              <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                <StyledButton onClick={() => handleEmail()}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <StyledButton onClick={handleEmail}>
                   <EmailIcon />
                   <Typography>Contact me</Typography>
                 </StyledButton>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+              </Box>
+            </CustomGrid>
+          </Box>
+        </CustomGrid>
       </Container>
     </StyledHero>
   );

@@ -1,13 +1,38 @@
 import * as React from "react";
-import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+import { AppBar, MenuItem, Toolbar } from "@mui/material";
+import styled from "../../utils/styled";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 
-export const StyledNavLink = styled("a")(() => ({
-  textDecoration: "none",
+const NavText = styled("span")(({ theme }) => ({
   color: "inherit",
+  fontWeight: 500,
+  cursor: "pointer",
+  position: "relative",
+  backgroundColor: "transparent",
+  textDecoration: "none !important", // garante que não tenha sublinhado
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    left: 0,
+    bottom: -2,
+    width: "100%",
+    height: 2,
+    backgroundColor: "transparent",
+    transform: "scaleX(0)",
+    transformOrigin: "left",
+    transition: "transform 0.3s ease",
+  },
+  "&:hover": {
+    color: theme.palette.secondary.main, // opcional: muda cor do texto também
+    backgroundColor: "transparent",
+    textDecoration: "none !important",
+  },
+  "&:hover::after": {
+    transform: "scaleX(1)",
+  },
 }));
 
 export const StyledMobileToolbar = styled(Toolbar)(({ theme }) => ({
@@ -55,7 +80,7 @@ export default function Navbar() {
         <StyledMobileToolbar>
           <IconButton
             size="large"
-            aria-label="account of current user"
+            aria-label="menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleMenu}
@@ -63,6 +88,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
+
           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}
@@ -75,25 +101,26 @@ export default function Navbar() {
             onClose={handleClose}
           >
             <MenuItem onClick={() => handleSmoothScroll("about")}>
-              <StyledNavLink>About</StyledNavLink>
+              <NavText>About</NavText>
             </MenuItem>
             <MenuItem onClick={() => handleSmoothScroll("skills")}>
-              <StyledNavLink>Skills</StyledNavLink>
+              <NavText>Skills</NavText>
             </MenuItem>
             <MenuItem onClick={() => handleSmoothScroll("projects")}>
-              <StyledNavLink>Projects</StyledNavLink>
+              <NavText>Projects</NavText>
             </MenuItem>
           </Menu>
         </StyledMobileToolbar>
+
         <StyledDesktopToolbar variant="regular">
           <MenuItem onClick={() => handleSmoothScroll("about")}>
-            <StyledNavLink>About</StyledNavLink>
+            <NavText>About</NavText>
           </MenuItem>
           <MenuItem onClick={() => handleSmoothScroll("skills")}>
-            <StyledNavLink>Skills</StyledNavLink>
+            <NavText>Skills</NavText>
           </MenuItem>
           <MenuItem onClick={() => handleSmoothScroll("projects")}>
-            <StyledNavLink>Projects</StyledNavLink>
+            <NavText>Projects</NavText>
           </MenuItem>
         </StyledDesktopToolbar>
       </AppBar>

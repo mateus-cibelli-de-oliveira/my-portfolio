@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import styled from "../../utils/styled";
 import type { ReactNode } from "react";
 
 interface StyledButtonProps {
