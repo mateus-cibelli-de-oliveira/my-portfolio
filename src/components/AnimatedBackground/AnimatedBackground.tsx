@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { styled } from "@mui/material/styles";
 
-const Canvas = styled("canvas")(() => ({         
-  width: "400px",     
-  height: "200px",
+const Canvas = styled("canvas")(() => ({
+  width: "240px",
+  height: "130px",
   position: "absolute",
   left: 0,
   zIndex: -1,
-  backgroundColor: "transparent"
-}))
+  backgroundColor: "transparent",
+}));
 
 const AnimatedBackground = () => {
   useEffect(() => {
@@ -72,9 +72,9 @@ const AnimatedBackground = () => {
     }, 5);
 
     return () => clearInterval(interval);
-  }, [])
+  }, []);
 
-  return <Canvas id="backdrop" />
-}
+  return <Canvas id="backdrop" />;
+};
 
-export default AnimatedBackground
+export default AnimatedBackground;
