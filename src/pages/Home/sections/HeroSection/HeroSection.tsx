@@ -7,7 +7,6 @@ import {
 } from "@mui/material";
 import styled from "../../../../utils/styled";
 import CustomGrid from "../../../../components/CustomGrid/CustomGrid";
-import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
@@ -77,7 +76,7 @@ const HeroSection: React.FC = () => {
             }}
           >
             <Box zIndex={1}>
-              <StyledImg src={Avatar} />
+              <StyledImg src="/images/avatar.jpg" alt="Avatar" />
             </Box>
 
             {!isMobile && (
