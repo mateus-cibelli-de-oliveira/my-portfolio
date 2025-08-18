@@ -1,16 +1,10 @@
-import {
-  Container,
-  Box,
-  Typography,
-  useTheme,
-  useMediaQuery,
+import { Container, Box, Typography, useTheme, useMediaQuery,
 } from "@mui/material";
 import styled from "../../../../utils/styled";
 import CustomGrid from "../../../../components/CustomGrid/CustomGrid";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
-import AnimatedBackground from "../../../../components/AnimatedBackground/AnimatedBackground";
 import Typewriter from "../../../../components/Typewriter/Typewriter";
 import CV from "../../../../assets/pdfs/Open.pdf";
 
@@ -20,22 +14,28 @@ const HeroSection: React.FC = () => {
     width: "88%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
-    [theme.breakpoints.down("xs")]: {
-      maxWidth: "200px",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "250px", 
+      width: "100%",        
+      height: "auto",
+      justifyContent: "center",
+      alignItems: "center",
     },
   }));
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  useMediaQuery(theme.breakpoints.down("sm"));
 
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    height: "100vh",
+    height: "80vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: "100px",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+      paddingTop: theme.spacing(15),
+      paddingBottom: theme.spacing(10),
     },
   }));
 
@@ -78,12 +78,6 @@ const HeroSection: React.FC = () => {
             <Box zIndex={1}>
               <StyledImg src="/images/avatar.jpg" alt="Avatar" />
             </Box>
-
-            {!isMobile && (
-              <Box position="absolute" mt={36} right={0} zIndex={0}>
-                <AnimatedBackground />
-              </Box>
-            )}
           </Box>
 
           {/* COLUNA DIREITA: TEXTO + BOTÕES */}

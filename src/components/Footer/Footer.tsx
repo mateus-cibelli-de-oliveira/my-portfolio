@@ -6,13 +6,13 @@ import EmailIcon from "@mui/icons-material/Email";
 const Footer: React.FC = () => {
   return (
     <>
-      <Box pt={2} pb={2}>
+      <Box pt={3} pb={2}>
         <Container maxWidth="sm">
           <Box
             display="flex"
             alignItems="center"
             justifyContent="space-around"
-            pb={1}
+            pb={4}
           >
             <IconButton
               onClick={() =>

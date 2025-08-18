@@ -47,7 +47,7 @@ const ProjectsSection: React.FC = () => {
           </Typography>
         </Box>
 
-        <CustomGrid variant="container" spacing={5} pb={3}>
+        <CustomGrid variant="container" spacing={5} pb={10}>
           {projects.map((project: ProjectCardProps, index: number) => (
             <Box
               key={index}

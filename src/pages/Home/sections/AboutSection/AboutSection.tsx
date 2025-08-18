@@ -7,7 +7,7 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 
 const AboutSection: React.FC = () => {
   const StyledCard = styled(Card)(({ theme }) => ({
-    padding: "10px 10px",
+    padding: "10px 20px",
     textAlign: "center",
     marginBottom: "10px",
     boxShadow: "0 2px 6px rgba(0, 0, 0, 0.15)",
@@ -110,7 +110,7 @@ const AboutSection: React.FC = () => {
         </Typography>
       </Box>
 
-      <Box mb={3}>
+      <Box mb={6}>
         <CustomGrid variant="container" spacing={2} justifyContent="center">
           {skillsSet.map((skill, index) => (
             <Box
