@@ -19,6 +19,7 @@ const AboutSection: React.FC = () => {
   const skillsSet = [
     "Javascript",
     "Typescript",
+    "Node.js",
     "React.js",
     "HTML5",
     "CSS3",
@@ -26,13 +27,14 @@ const AboutSection: React.FC = () => {
     "Bootstrap 5",
     "Material UI",
     "WordPress",
-    "PHP",
-    "Laravel",
-    "MySQL",
-    "Oracle",
+    "Elementor",
+    "MySQL2",
     "MongoDb",
     "Firebase",
     "Git",
+    "FileZilla",
+    "GIMP",
+    "Canva",
   ];
 
   const birthYear = 1997;
