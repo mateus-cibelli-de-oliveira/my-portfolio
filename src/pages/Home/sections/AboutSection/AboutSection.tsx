@@ -17,8 +17,8 @@ const AboutSection: React.FC = () => {
   }));
 
   const skillsSet = [
-    "Javascript",
-    "Typescript",
+    "JavaScript",
+    "TypeScript",
     "Node.js",
     "React.js",
     "HTML5",
@@ -28,11 +28,11 @@ const AboutSection: React.FC = () => {
     "Material UI",
     "WordPress",
     "Elementor",
-    "MySQL2",
+    "MySQL",
     "MongoDb",
     "Firebase",
-    "Git",
     "FileZilla",
+    "Git",
     "GIMP",
     "Canva",
   ];
