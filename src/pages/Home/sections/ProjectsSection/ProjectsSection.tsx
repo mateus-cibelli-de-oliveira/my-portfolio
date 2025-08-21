@@ -32,6 +32,16 @@ const ProjectsSection: React.FC = () => {
       websiteURL: "https://gerador-ms.vercel.app/",
       codeURL: "https://github.com/mateus-cibelli-de-oliveira/geradorMS",
     },
+    {
+      title: 'Projeto de site "Academia Gym" desenvolvido em WordPress',
+      subtitle: "(Ago 2025)",
+      srcImg: "/images/capa-academia-gym.jpg",
+      description:
+        "Site institucional totalmente responsivo com loja virtual integrada, páginas de Home, Sobre, Loja Virtual, Matricule-se e Contato, além de botão flutuante para WhatsApp. Inclui newsletter no rodapé, envio de e-mails configurado via SMTP, cache de páginas, otimização de imagens e backup automático no Google Drive. Desenvolvido em WordPress com foco em performance e boas práticas.",
+      technologies:
+        "Technologies: WordPress, Elementor, WooCommerce, WP Mail SMTP, WP Super Cache, UpdraftPlus, WWW Image Optimizer",
+      websiteURL: "http://academia-gym.free.nf",
+    },
   ];
 
   return (
