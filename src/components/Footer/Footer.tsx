@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             </IconButton>
             <IconButton
               onClick={() =>
-                window.open("https://www.linkedin.com/in/mateus-cibelli/")
+                window.open("https://www.linkedin.com/in/mateus-cibelli")
               }
             >
               <LinkedInIcon />
