@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/react";
+import { keyframes, type Keyframes } from "@emotion/react";
 import styled from "../../utils/styled";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 
@@ -52,7 +52,7 @@ const AnimationComponent: React.FC<AnimationComponentProps> = ({
 
   const StyledAnimationComponent = styled("div")<{
     startAnimation: boolean;
-    moveDirection: string;
+    moveDirection: Keyframes;
   }>(({ startAnimation, moveDirection }) => ({
     animation: startAnimation ? `${moveDirection} 1s linear` : "none",
   }));
