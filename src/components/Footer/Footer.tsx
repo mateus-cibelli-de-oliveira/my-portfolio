@@ -18,6 +18,10 @@ const Footer: React.FC = () => {
             onClick={() =>
               window.open("https://github.com/mateus-cibelli-de-oliveira")
             }
+            sx={{
+              transition: "color 0.3s ease",
+              "&:hover": { color: "#FF7300" }
+            }}
           >
             <GitHubIcon />
           </IconButton>
@@ -26,6 +30,10 @@ const Footer: React.FC = () => {
             onClick={() =>
               window.open("https://www.linkedin.com/in/mateus-cibelli")
             }
+            sx={{
+              transition: "color 0.3s ease",
+              "&:hover": { color: "#FF7300" }
+            }}
           >
             <LinkedInIcon />
           </IconButton>
@@ -34,6 +42,10 @@ const Footer: React.FC = () => {
             href="mailto:mateuscibelli@hotmail.com"
             rel="noopener noreferrer"
             aria-label="Email"
+            sx={{
+              transition: "color 0.3s ease",
+              "&:hover": { color: "#FF7300" }
+            }}
           >
             <EmailIcon />
           </IconButton>
