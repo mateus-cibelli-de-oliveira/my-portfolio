@@ -23,7 +23,7 @@ const CustomGridBase = React.forwardRef<HTMLDivElement, CustomGridProps>(
 
 CustomGridBase.displayName = "CustomGrid";
 
-// Estilização com styled (caso você precise)
+// Estilização com styled (para usar futuramente)
 const CustomGrid = styled(CustomGridBase)(() => ({}));
 
 export default CustomGrid;
