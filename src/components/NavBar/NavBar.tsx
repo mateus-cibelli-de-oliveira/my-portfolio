@@ -26,7 +26,7 @@ const NavText = styled("span")(({ theme }) => ({
     transition: "transform 0.3s ease",
   },
   "&:hover": {
-    color: theme.palette.secondary.main, // opcional: muda cor do texto também
+    color: theme.palette.secondary.main, // opcional: muda a cor do texto também
     backgroundColor: "transparent",
     textDecoration: "none !important",
   },
