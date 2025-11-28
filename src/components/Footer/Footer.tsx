@@ -13,43 +13,52 @@ const Footer: React.FC = () => {
           justifyContent="space-around"
           pb={4}
         >
+          {/* GitHub */}
           <IconButton
             aria-label="GitHub"
             onClick={() =>
               window.open("https://github.com/mateus-cibelli-de-oliveira")
             }
             sx={{
+              color: "text.secondary",
               transition: "color 0.3s ease",
-              "&:hover": { color: "#FF7300" }
+              "&:hover": { color: "#FF7300" },
             }}
           >
             <GitHubIcon />
           </IconButton>
+
+          {/* LinkedIn */}
           <IconButton
             aria-label="LinkedIn"
             onClick={() =>
               window.open("https://www.linkedin.com/in/mateus-cibelli")
             }
             sx={{
+              color: "text.secondary",
               transition: "color 0.3s ease",
-              "&:hover": { color: "#FF7300" }
+              "&:hover": { color: "#FF7300" },
             }}
           >
             <LinkedInIcon />
           </IconButton>
+
+          {/* Email */}
           <IconButton
             component="a"
             href="mailto:mateuscibelli@hotmail.com"
             rel="noopener noreferrer"
             aria-label="Email"
             sx={{
+              color: "text.secondary",
               transition: "color 0.3s ease",
-              "&:hover": { color: "#FF7300" }
+              "&:hover": { color: "#FF7300" },
             }}
           >
             <EmailIcon />
           </IconButton>
         </Box>
+
         <Typography textAlign="center">
           &copy; 2024 Mateus Cibelli - All rights reserved
         </Typography>
