@@ -1,4 +1,9 @@
-import { Container, Box, Typography, useTheme, useMediaQuery,
+import {
+  Container,
+  Box,
+  Typography,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import styled from "../../../../utils/styled";
 import CustomGrid from "../../../../components/CustomGrid/CustomGrid";
@@ -15,12 +20,12 @@ const HeroSection: React.FC = () => {
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
     [theme.breakpoints.down("md")]: {
-      maxWidth: "250px", 
-      width: "100%",        
+      maxWidth: "250px",
+      width: "100%",
       height: "auto",
       justifyContent: "center",
-      alignItems: "center",
-    },
+      alignItems: "center"
+    }
   }));
 
   const theme = useTheme();
@@ -35,8 +40,8 @@ const HeroSection: React.FC = () => {
     [theme.breakpoints.down("md")]: {
       height: "auto",
       paddingTop: theme.spacing(15),
-      paddingBottom: theme.spacing(10),
-    },
+      paddingBottom: theme.spacing(10)
+    }
   }));
 
   const handleDownload = () => {
@@ -46,7 +51,7 @@ const HeroSection: React.FC = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }
 
   const handleEmail = () => {
     const email = "mateuscibelli@hotmail.com";
@@ -54,7 +59,7 @@ const HeroSection: React.FC = () => {
     const body = encodeURIComponent("Hello! I saw your portfolio...");
     const outlookLink = `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${subject}&body=${body}`;
     window.open(outlookLink, "_blank");
-  };
+  }
 
   return (
     <StyledHero>
@@ -139,6 +144,6 @@ const HeroSection: React.FC = () => {
       </Container>
     </StyledHero>
   );
-};
+}
 
 export default HeroSection;
