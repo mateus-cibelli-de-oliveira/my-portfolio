@@ -6,7 +6,7 @@ import ProjectCard, { type ProjectCardProps } from "./ProjectCard";
  * Testes para validar o componente ProjectCard.
  * O objetivo é garantir que o card renderiza corretamente todos os elementos:
  * título, subtítulo, imagem, descrição, tecnologias e botões de ação.
- * Também verifica se os botões de "View Project" e "View Code" estão presentes e interativos.
+ * Também verifica se os botões de "View Project" e "View Code" estão presentes * e interativos.
  */
 describe("ProjectCard Component", () => {
   const defaultProps: ProjectCardProps = {

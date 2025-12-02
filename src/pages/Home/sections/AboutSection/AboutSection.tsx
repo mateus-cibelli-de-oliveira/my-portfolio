@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
     "FileZilla",
     "Git",
     "GIMP",
-    "Canva",
+    "Canva"
   ];
 
   const birthYear = 1997;
@@ -69,9 +69,7 @@ const AboutSection: React.FC = () => {
                 Experience
               </Typography>
               <Typography textAlign="center">3+ years</Typography>
-              <Typography textAlign="center">
-                Frontend Development
-              </Typography>
+              <Typography textAlign="center">Frontend Development</Typography>
             </StyledCard>
           </AnimationComponent>
         </Box>
@@ -119,7 +117,7 @@ const AboutSection: React.FC = () => {
               key={index}
               sx={{
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               <StyledCard variant="outlined">{skill}</StyledCard>
@@ -129,6 +127,6 @@ const AboutSection: React.FC = () => {
       </Box>
     </Container>
   );
-};
+}
 
 export default AboutSection;
