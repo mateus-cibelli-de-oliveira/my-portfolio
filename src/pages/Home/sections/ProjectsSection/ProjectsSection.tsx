@@ -20,7 +20,7 @@ const ProjectsSection: React.FC = () => {
         "É um modelo de site de empreendimentos usando WordPress em um tema padrão onde trabalhei na customização do layout, organização da estrutura de páginas e navegação. O foco maior foi criar uma experiência clara, responsiva e funcional, simulando um site de portfólio pessoal.",
       technologies: "Technologies: WordPress, HTML, CSS",
       websiteURL:
-        "https://behance.net/gallery/115607825/Projeto-do-site-Info-Office",
+        "https://behance.net/gallery/115607825/Projeto-do-site-Info-Office"
     },
     {
       title: "Gerador de números aleatórios da Mega-Sena feito em React",
@@ -30,7 +30,7 @@ const ProjectsSection: React.FC = () => {
         'Trata-se de um aplicativo responsivo feito em react para facilitar a vida de quem não quer "depender da própria sorte", mas de um sistema que possibilite gerar números aleatórios para poder trazer mais confiança ao jogo.',
       technologies: "Technologies: JavaScript, React.js, CSS",
       websiteURL: "https://gerador-ms.vercel.app/",
-      codeURL: "https://github.com/mateus-cibelli-de-oliveira/geradorMS",
+      codeURL: "https://github.com/mateus-cibelli-de-oliveira/geradorMS"
     },
     {
       title: 'Projeto de site "Academia Gym" desenvolvido em WordPress',
@@ -40,18 +40,19 @@ const ProjectsSection: React.FC = () => {
         "Site institucional totalmente responsivo com loja virtual integrada, páginas de Home, Sobre, Loja Virtual, Matricule-se e Contato, além de botão flutuante para WhatsApp. Inclui newsletter no rodapé, envio de e-mails configurado via SMTP, cache de páginas, otimização de imagens e backup automático no Google Drive. Desenvolvido em WordPress com foco em performance e boas práticas.",
       technologies:
         "Technologies: WordPress, Elementor, WooCommerce, WP Mail SMTP, WP Super Cache, UpdraftPlus, WWW Image Optimizer",
-      websiteURL: "http://academia-gym.free.nf",
+      websiteURL: "http://academia-gym.free.nf"
     },
     {
-      title: 'Projeto "Sites Minimalistas" feito em WordPress com integração de e-mail corporativo, formulário e otimização de DNS via Cloudflare.',
+      title:
+        'Projeto "Sites Minimalistas" feito em WordPress com integração de e-mail corporativo, formulário e otimização de DNS via Cloudflare.',
       subtitle: "(Ago 2025)",
       srcImg: "/images/capa-minimalistas.jpg",
       description:
         "É um site institucional desenvolvido em WordPress para a divulgação e comercialização de produtos digitais. O projeto está em evolução constante: além da configuração de domínio, DNS, SSL, e-mail corporativo e formulário de contato, busco constantes melhorias para o ranqueamento, desempenho e segurança do site por meio de plugins e integrações. A ideia principal foi reunir uma estrutura 100% gratuita que resultasse em um site entregável e profissional. Para isso, utilizei InfinityFree (hospedagem), ImprovedMX (encaminhamento de e-mails), Brevo (envio de e-mails transacionais) e Cloudflare (DNS e proteção).",
       technologies:
         "Tecnologias: WordPress, Elementor, Brevo, ImprovedMX, Cloudflare",
-      websiteURL: "https://sitesminimalistas.com",
-    },
+      websiteURL: "https://sitesminimalistas.com"
+    }
   ];
 
   return (
@@ -95,6 +96,6 @@ const ProjectsSection: React.FC = () => {
       </Container>
     </StyledExperience>
   );
-};
+}
 
 export default ProjectsSection;
