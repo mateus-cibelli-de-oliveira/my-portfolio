@@ -18,7 +18,7 @@ const ProjectsSection: React.FC = () => {
       srcImg: "/images/capa-info-office.jpg",
       description:
         "É um modelo de site de empreendimentos usando WordPress em um tema padrão onde trabalhei na customização do layout, organização da estrutura de páginas e navegação. O foco maior foi criar uma experiência clara, responsiva e funcional, simulando um site de portfólio pessoal.",
-      technologies: "Technologies: WordPress, HTML, CSS",
+      technologies: "Technologias: WordPress, HTML, CSS",
       websiteURL:
         "https://behance.net/gallery/115607825/Projeto-do-site-Info-Office"
     },
@@ -28,7 +28,7 @@ const ProjectsSection: React.FC = () => {
       srcImg: "/images/capa-gerador-ms.jpg",
       description:
         'Trata-se de um aplicativo responsivo feito em react para facilitar a vida de quem não quer "depender da própria sorte", mas de um sistema que possibilite gerar números aleatórios para poder trazer mais confiança ao jogo.',
-      technologies: "Technologies: JavaScript, React.js, CSS",
+      technologies: "Technologias: JavaScript, React.js, CSS",
       websiteURL: "https://gerador-ms.vercel.app/",
       codeURL: "https://github.com/mateus-cibelli-de-oliveira/geradorMS"
     },
@@ -39,7 +39,7 @@ const ProjectsSection: React.FC = () => {
       description:
         "Site institucional totalmente responsivo com loja virtual integrada, páginas de Home, Sobre, Loja Virtual, Matricule-se e Contato, além de botão flutuante para WhatsApp. Inclui newsletter no rodapé, envio de e-mails configurado via SMTP, cache de páginas, otimização de imagens e backup automático no Google Drive. Desenvolvido em WordPress com foco em performance e boas práticas.",
       technologies:
-        "Technologies: WordPress, Elementor, WooCommerce, WP Mail SMTP, WP Super Cache, UpdraftPlus, WWW Image Optimizer",
+        "Technologias: WordPress, Elementor, WooCommerce, WP Mail SMTP, WP Super Cache, UpdraftPlus, WWW Image Optimizer",
       websiteURL: "http://academia-gym.free.nf"
     },
     {
@@ -52,6 +52,18 @@ const ProjectsSection: React.FC = () => {
       technologies:
         "Tecnologias: WordPress, Elementor, Brevo, ImprovedMX, Cloudflare",
       websiteURL: "https://sitesminimalistas.com"
+    },
+    {
+      title:
+        'Sistema de pedidos "Reactzzaria" feito em React',
+      subtitle: "(Janeiro 2026)",
+      srcImg: "/images/capa-reactzzaria.jpg",
+      description:
+        "É uma aplicação web com frontend moderno integrado ao banco Firebase, simulando o funcionamento básico de uma pizzaria real. A aplicação permite que os usuários autenticados consultem informações como tamanhos de pizza e sabores disponíveis, além de realizar pedidos, garantindo que cada usuário tenha acesso apenas aos seus próprios dados. Todo o controle de acesso é feito por meio do 'Firebase Authentication' e regras de segurança do Firestore, seguindo as boas práticas atuais. O projeto foi desenvolvido com atenção especial à organização do código, uso correto de variáveis de ambiente e separação entre ambientes de desenvolvimento e produção.",
+      technologies:
+        "Tecnologias: React (Vite), JavaScript (ES6+), Styled Components, Material UI, Authentication (Login com GitHub), Firebase (Security Rules)",
+      websiteURL: "https://reactzzaria.vercel.app",
+      codeURL: "https://github.com/mateus-cibelli-de-oliveira/reactzzaria--sistema-pedidos"
     }
   ];
 
