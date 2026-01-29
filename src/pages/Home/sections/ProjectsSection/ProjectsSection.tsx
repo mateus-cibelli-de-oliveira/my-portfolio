@@ -64,6 +64,18 @@ const ProjectsSection: React.FC = () => {
         "Tecnologias: React (Vite), JavaScript (ES6+), Styled Components, Material UI, Authentication (Login com GitHub), Firebase (Security Rules)",
       websiteURL: "https://reactzzaria.vercel.app",
       codeURL: "https://github.com/mateus-cibelli-de-oliveira/reactzzaria--sistema-pedidos"
+    },
+    {
+      title:
+        'Sistema de cadastro "Reactzzaria" feito em React',
+      subtitle: "(Janeiro 2026)",
+      srcImg: "/images/capa-reactzzaria-cadastro.jpg",
+      description:
+        "É uma aplicação web com frontend moderno integrado ao banco Firebase, simulando o funcionamento administrativo de uma pizzaria real. A aplicação garante que apenas usuários administradores podem manipular os status dos pedidos, enquanto usuários comuns podem apenas criar e visualizar seus próprios pedidos. Todo o controle de acesso é feito por meio do 'Firebase Authentication' e regras de segurança do Firestore, seguindo as boas práticas atuais. O projeto é uma extensão do sistema de pedidos e foi desenvolvido com atenção especial à organização do código, uso correto de variáveis de ambiente e separação entre ambientes de desenvolvimento e produção.",
+      technologies:
+        "Tecnologias: React (Vite), JavaScript (ES6+), Styled Components, Material UI, Authentication (Login com GitHub), Firebase (Security Rules)",
+      websiteURL: "https://reactzzaria-cadastro.vercel.app",
+      codeURL: "https://github.com/mateus-cibelli-de-oliveira/reactzzaria--sistema-cadastro"
     }
   ];
 
